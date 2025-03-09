@@ -20,6 +20,7 @@ configurations {
 }
 
 repositories {
+	mavenLocal() // Make sure this is here to find the published stubs
 	mavenCentral()
 }
 
@@ -27,11 +28,16 @@ extra["springCloudVersion"] = "2024.0.0"
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter")
+	implementation("org.springframework.boot:spring-boot-starter-web")
+
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.cloud:spring-cloud-starter-contract-stub-runner")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
+//	testImplementation("pl.zajacp.contracts:producer:0.0.1-SNAPSHOT:stubs")
 }
 
 dependencyManagement {

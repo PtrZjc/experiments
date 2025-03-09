@@ -1,0 +1,12 @@
+request:
+  method: GET
+  url: /boardgame/2000
+  headers:
+    Content-Type: application/json
+response:
+  status: 400
+  body:
+    - path: getBestBggInYear.yearPublished
+      message: Year must be between 2010 and 2025
+  headers:
+    Content-Type: application/json

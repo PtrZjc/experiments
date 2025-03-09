@@ -1,0 +1,16 @@
+# https://docs.spring.io/spring-cloud-contract/docs/current/reference/html/getting-started.html
+
+request:
+  method: GET
+  url: /boardgame/2020
+  headers:
+    Content-Type: application/json
+response:
+  status: 200
+  body:
+    title: 'Dune: Imperium'
+    yearPublished: 2020
+    avgRating: 8.2
+  headers:
+    Content-Type: application/json
+

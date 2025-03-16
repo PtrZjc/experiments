@@ -1,0 +1,1 @@
+[the course](https://courses.kevinpowell.co/view/courses/conquering-responsive-layouts/)

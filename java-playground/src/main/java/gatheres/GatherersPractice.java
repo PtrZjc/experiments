@@ -1,4 +1,4 @@
-package pl.zajacp.playground.gatheres;
+package gatheres;
 
 import java.util.stream.Gatherer;
 import java.util.stream.Gatherers;
@@ -6,7 +6,6 @@ import java.util.stream.Stream;
 
 // https://dev.java/learn/api/streams/gatherers/
 
-@SuppressWarnings("preview")
 public class GatherersPractice {
     public static void main(String[] args) {
         var fold = Gatherers.scan(

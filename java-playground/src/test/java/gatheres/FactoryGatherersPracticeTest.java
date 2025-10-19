@@ -1,4 +1,4 @@
-package pl.zajacp.playground.gatheres;
+package gatheres;
 
 import org.junit.jupiter.api.Test;
 
@@ -10,7 +10,6 @@ import java.util.stream.IntStream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@SuppressWarnings("preview")
 class FactoryGatherersPracticeTest {
 
     @Test

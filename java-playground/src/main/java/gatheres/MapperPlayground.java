@@ -1,4 +1,4 @@
-package pl.zajacp.playground.gatheres;
+package gatheres;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

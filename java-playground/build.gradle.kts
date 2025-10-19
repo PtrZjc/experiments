@@ -10,9 +10,8 @@ repositories {
 }
 
 java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(23))
-    }
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
 }
 
 dependencies {
@@ -20,23 +19,9 @@ dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     testImplementation("org.assertj:assertj-core:3.27.3")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 tasks.test {
     useJUnitPlatform()
-}
-
-tasks.withType<JavaCompile>().configureEach {
-    options.compilerArgs.addAll(listOf("--enable-preview", "-Xlint:preview"))
-    options.release.set(23)
-}
-
-// Also add this for the Java runtime
-tasks.withType<JavaExec>().configureEach {
-    jvmArgs("--enable-preview")
-}
-
-// For testing if needed
-tasks.withType<Test>().configureEach {
-    jvmArgs("--enable-preview")
 }

@@ -1,4 +1,4 @@
-package pl.zajacp.playground.gatheres;
+package gatheres;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -20,7 +20,6 @@ import java.util.stream.Stream;
 import static java.util.Collections.nCopies;
 import static org.assertj.core.api.Assertions.assertThat;
 
-@SuppressWarnings("preview")
 class ManualGatherersPracticeTest {
 
     @Test
